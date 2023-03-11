@@ -8,12 +8,12 @@ limitation: a small (constant) time overhead is added to each command, because I
 You can not use multi line commands, that you would use with shift+enter in powershell.
 
 The problem I had is, that I can not know when a command is finished.
-so after each command I launch another command, that just prints some random string
-if my the console output is then equal to this string, I know that both commands have finished
-
-check out the examples.ipynb file to see how to use it
+To solve this, I use a trick:
+I launch a powershell command, that just prints a random string
+When the console output is equal to this string, I know that the command has finished
 
 ## Usage
+check out the examples.ipynb file to see how to use it
 ```python
 from interactive_powershell import InteractivePowershell
 ps = InteractivePowershell()
